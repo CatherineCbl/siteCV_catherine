@@ -73,7 +73,7 @@ $ligne_realisations = $sql->fetch(); //
 							<fieldset>
 
 							<!-- Form Name -->
-							<legend>Form Name</legend>
+							<legend>Modification de la réalisation</legend>
 
 							<!-- Text input-->
 							<div class="form-group">
