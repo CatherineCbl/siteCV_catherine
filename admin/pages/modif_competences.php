@@ -4,8 +4,9 @@
 // Gestion des contenus, mise à jour d'une compétence
 if(isset($_POST['competence'])){
 	$competence = addslashes($_POST['competence']);
+	$niveau = addslashes($_POST['niveau']);
 	$id_competence = $_POST['id_competence'];
-	$pdoCV->exec(" UPDATE t_competences SET competence='$competence' WHERE id_competence='$id_competence' ");
+	$pdoCV->exec(" UPDATE t_competences SET competence='$competence', niveau='$niveau' WHERE id_competence='$id_competence' ");
 	header('location: ../pages/competences.php');
 	exit();
 }
@@ -87,6 +88,7 @@ $ligne_competences = $sql->fetch(); //
 									<label for="competence" class="col-md-4 control-label" >Compétence</label>
 									<div class="col-md-4">
 										<input name="competence" type="text" class="form-control input-md" value="<?= $ligne_competences['competence']; ?>">
+										<input name="niveau" type="text" class="form-control input-md" value="<?= $ligne_competences['niveau']; ?>">
 										<input name="id_competence" hidden value="<?= $ligne_competences['id_competence']; ?>">
 									</div>
 								</div>
@@ -96,7 +98,7 @@ $ligne_competences = $sql->fetch(); //
 									<label class="col-md-4 control-label" for=""></label>
 									<div class="col-md-4">
 										<button type="submit" class="btn btn-primary">Mettre à jour</button>
-                                        <a href="competences.php"><button type="button" name="button" class="btn btn-danger">Annuler</button></a> 
+                                        <a href="competences.php"><button type="button" name="button" class="btn btn-danger">Annuler</button></a>
 									</div>
 								</div>
 

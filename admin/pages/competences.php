@@ -57,12 +57,14 @@ include '../inc/nav.inc.php';
                                             <tbody>
                                                 <tr>
                                                     <th scope="col">Compétences</th>
+                                                    <th scope="col">Niveau</th>
                                                     <th scope="col">Modifier</th>
                                                     <th scope="col">Supprimer</th>
                                                 </tr>
                                                 <?php foreach ($ligne_competence as $ligne_competences) : ?>
                                                 <tr id="<?php echo $ligne_competences['id_competence']; ?>">
                                                     <td><?= $ligne_competences['competence'];?></td>
+                                                    <td><?= $ligne_competences['niveau'];?></td>
                                                     <td><a href="../pages/modif_competences.php?id_competence=<?php echo $ligne_competences['id_competence']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
                                                     <td><a id="suppression" href="<?php echo $ligne_competences['id_competence']; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
                                                 </tr>
@@ -79,6 +81,7 @@ include '../inc/nav.inc.php';
                                 <div class="form-group">
                                     <label for="competence">Ajouter une compétence</label>
                                     <input class="form-control" placeholder="Ex: SQL" name="competence" id="competence" required>
+                                    <input class="form-control" placeholder="90%" name="niveau" id="niveau" required>
                                 </div>
                                 <button type="submit" class="btn btn-default" id="button_competence">Ajouter</button>
                             </form>
