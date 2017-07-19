@@ -34,7 +34,7 @@ include '../inc/nav.inc.php';
                        Votre telephone est : <?=$utilisateur['telephone']?><br>
                        Votre pseudo est : <?=$utilisateur['pseudo']?><br><br>
                         Photo de profil :<br>
-                       <img src="../img/<?=$utilisateur['avatar']?>" width="90px" height="100px" style="border-radius:50px;" ></img><br><br>
+                       <img src="../img/<?=$utilisateur['avatar']?>" width="80px" height="100px" style="border-radius:50px;" ></img><br><br>
                        Votre adresse est : <?=$utilisateur['adresse']?><br>
                        Votre code postal est : <?=$utilisateur['code_postal']?><br>
                        Votre ville est : <?=$utilisateur['ville']?><br>
