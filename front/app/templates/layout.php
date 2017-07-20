@@ -1,6 +1,10 @@
 <?php
 //require '../connexion/connexion.php';
 use Model\Db\DbFactory;
+
+DbFactory::start();
+$titres_cv = \ORM::for_table('t_titres_cv')->where('utilisateur_id','1')->find_one();
+$utilisateurs = \ORM::for_table('t_utilisateurs')->where('id_utilisateur', '1')->find_one();
  ?>
 
 <!DOCTYPE html>
@@ -8,7 +12,7 @@ use Model\Db\DbFactory;
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Site CV de Catherine CABEUIL</title>
+<title>Site CV de <?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?></title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -41,7 +45,7 @@ use Model\Db\DbFactory;
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
-      <a class="navbar-brand page-scroll" href="#page-top"> Catherine CABEUIL</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top"> <?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?></a> </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="menu-center">
@@ -66,8 +70,8 @@ use Model\Db\DbFactory;
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1> <span class="brand-heading">Catherine CABEUIL</span></h1>
-          <h2 class="intro-text">Développeuse web fullstack junior</h2>
+          <h1> <span class="brand-heading"><?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?></span></h1>
+          <h2 class="intro-text"><?= $titres_cv->titre_cv ?></h2>
           <a href=<?= $this->assetUrl("img/CV_catherine_cabeuil.pdf");?> class="btn btn-default page-scroll" download>Téléchargez mon Cv </a> </div>
       </div>
     </div>
@@ -92,7 +96,7 @@ use Model\Db\DbFactory;
 
 <div id="footer">
   <div class="container">
-    <p>Copyright &copy; Catherine CABEUIL 2017</p>  <p><a href="../../../admin/pages/authentification.php">Espace admin</a></p>
+    <p>Copyright &copy; <?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?> 2017</p>  <p><a href="../../../admin/pages/authentification.php">Espace admin</a></p>
   </div>
 </div>
 

@@ -22,6 +22,7 @@ class DbFactory{
         #Configuration de la clé primaire de chaque table
         ORM::configure('id_column_overrides', array(
             't_utilisateurs'=> 'id_utilisateur',
+            't_titres_cv'   => 'id_titre_cv',
             't_competences' => 'id_competence',
             't_loisirs'     => 'id_loisir',
             't_experiences' => 'id_experience',

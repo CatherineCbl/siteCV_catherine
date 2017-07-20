@@ -32,48 +32,19 @@
                     <div class="col-lg-12">
                         <section class="timeline">
                             <ul>
+                                <?php foreach ($formations as $formation) : ?>
                                 <li>
                                     <div>
-                                        <time class="text-uppercase">20/03/2017 - 20/05/2017</time>
-                                        <h4 class="subheading">Intégratrice e-mailing chez Showroomprivé</h4>
-                                        <p class="text-muted"><p>Stage de deux mois&nbsp;en int&eacute;gration d&#39;email responsive au sein de l&#39;entreprise Showroompriv&eacute;.</p>
+                                        <time class="text-uppercase"><?= $formation->date_f ?></time>
+                                        <h4 class="subheading"><?= $formation->titre_f ?></h4>
+                                        <h5 class="subheading"><?= $formation->sous_titre_f ?></h5>
+                                        <p class="text-muted"><p><?= $formation->description_f ?></p>
 </p>
-                                        <span>Showroomprivé.com - Plaine Saint-Denis</span>
+                                        
                                     </div>
                                 </li>
-                                <li>
-                                    <div>
-                                        <time class="text-uppercase">Septembre 2016 - Janvier 2017</time>
-                                        <h4 class="subheading">Développement / Intégration WEB</h4>
-                                        <p class="text-muted">Formation en développement et intégration web. (Html/Css, responsive design, PHP, ajax, javascript, wordpress, référencement).</p>
-                                        <span>Web Force 3 - Villeneuve-la-Garenne</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <time class="text-uppercase">Juillet 2016 - Mai 2017</time>
-                                        <h4 class="subheading">Intégration + Print</h4>
-                                        <p class="text-muted">Formation principalement basé sur le print qui comprend la période de formation WF3.</p>
-                                        <span>Le PôleS - Villeneuve-la-Garenne</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <time class="text-uppercase">2012 - 2015</time>
-                                        <h4 class="subheading">Baccalauréat Littéraire</h4>
-                                        <p class="text-muted">Bac Littéraire avec option musique.</p>
-                                        <span>Lycée Auguste Renoir - Asnières-sur-seine</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <time class="text-uppercase">Mai 2012</time>
-                                        <h4 class="subheading">Stage dans le pôle informatique</h4>
-                                        <p class="text-muted"><p>Stage de 3&egrave;me au sein de l&#39;entreprise Six Telekurs dans le secteur informatique.</p>
-</p>
-                                        <span>Six Telekurs - Nanterre</span>
-                                    </div>
-                                </li>
+                                <?php endforeach; ?>
+
                             </ul>
                         </section>
                     </div>

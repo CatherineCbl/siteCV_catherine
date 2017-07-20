@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 10 Juillet 2017 à 09:15
+-- Généré le :  Jeu 20 Juillet 2017 à 16:13
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `sitecv_catherine`
+-- Base de données :  `ccabeuil_bd`
 --
 
 -- --------------------------------------------------------
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `t_competences` (
   `id_competence` int(11) NOT NULL,
   `competence` varchar(45) NOT NULL,
+  `niveau` varchar(5) NOT NULL,
   `utilisateur_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -36,13 +37,17 @@ CREATE TABLE `t_competences` (
 -- Contenu de la table `t_competences`
 --
 
-INSERT INTO `t_competences` (`id_competence`, `competence`, `utilisateur_id`) VALUES
-(2, 'CSS3', 1),
-(3, 'JavaScript', 1),
-(4, 'JQuery', 1),
-(8, 'SQL', 1),
-(9, 'Angular', 1),
-(11, 'PHP', 1);
+INSERT INTO `t_competences` (`id_competence`, `competence`, `niveau`, `utilisateur_id`) VALUES
+(1, 'HTML5', '80%', 1),
+(2, 'CSS3', '60%', 1),
+(3, 'Bootstrap', '75%', 1),
+(4, 'JavaScript', '15%', 1),
+(5, 'JQuery', '10%', 1),
+(6, 'Angular', '5%', 1),
+(7, 'Ajax', '55%', 1),
+(8, 'PHP7', '55%', 1),
+(9, 'SQL', '65%', 1),
+(10, 'WordPress', '65%', 1);
 
 -- --------------------------------------------------------
 
@@ -59,6 +64,13 @@ CREATE TABLE `t_experiences` (
   `utilisateur_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `t_experiences`
+--
+
+INSERT INTO `t_experiences` (`id_experience`, `titre_e`, `sous_titre_e`, `dates_e`, `description_e`, `utilisateur_id`) VALUES
+(40, 'Agent renfort des écoles maternelles', 'Mairie de Paris', '2014-01-08', '<p>Surveillance des enfants / Entretien de leur lieu de vie / Service des repas</p>\r\n', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -73,6 +85,14 @@ CREATE TABLE `t_formations` (
   `description_f` text NOT NULL,
   `utilisateur_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `t_formations`
+--
+
+INSERT INTO `t_formations` (`id_formation`, `titre_f`, `sous_titre_f`, `dates_f`, `description_f`, `utilisateur_id`) VALUES
+(1, 'xcascxas', 'cz', '2017-07-13', '<p>tgrzhyetht</p>\r\n', 1),
+(2, 'cwqc', 'qwsc', '2017-07-13', '', 1);
 
 -- --------------------------------------------------------
 
@@ -108,7 +128,8 @@ CREATE TABLE `t_loisirs` (
 --
 
 INSERT INTO `t_loisirs` (`id_loisir`, `loisir`, `utilisateur_id`) VALUES
-(1, 'Voyages', 1);
+(1, 'Voyages', 1),
+(19, 'voyages2', 1);
 
 -- --------------------------------------------------------
 
@@ -124,6 +145,14 @@ CREATE TABLE `t_realisations` (
   `description_r` text NOT NULL,
   `utilisateur_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `t_realisations`
+--
+
+INSERT INTO `t_realisations` (`id_realisation`, `titre_r`, `sous_titre_r`, `dates_r`, `description_r`, `utilisateur_id`) VALUES
+(6, 'faefaé', NULL, '2017-07-13', 'aefraée', 1),
+(7, 'dzadé', NULL, '2017-07-17', 'dé"dfée', 1);
 
 -- --------------------------------------------------------
 
@@ -240,17 +269,17 @@ ALTER TABLE `t_utilisateurs`
 -- AUTO_INCREMENT pour la table `t_competences`
 --
 ALTER TABLE `t_competences`
-  MODIFY `id_competence` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_competence` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `t_experiences`
 --
 ALTER TABLE `t_experiences`
-  MODIFY `id_experience` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_experience` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT pour la table `t_formations`
 --
 ALTER TABLE `t_formations`
-  MODIFY `id_formation` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_formation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `t_intertitres`
 --
@@ -260,12 +289,12 @@ ALTER TABLE `t_intertitres`
 -- AUTO_INCREMENT pour la table `t_loisirs`
 --
 ALTER TABLE `t_loisirs`
-  MODIFY `id_loisir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_loisir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT pour la table `t_realisations`
 --
 ALTER TABLE `t_realisations`
-  MODIFY `id_realisation` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_realisation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `t_titres_cv`
 --
