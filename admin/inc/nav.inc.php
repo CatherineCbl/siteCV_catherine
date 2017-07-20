@@ -16,7 +16,7 @@ if (isset($_GET['quitter'])) {//on vide les variables de session
     $_SESSION['nom']='';
     unset($_SESSION['connexion']);
     session_destroy();
-    header('location:../../front/app/templates/default/index.php');
+    header('location:../../front/public/index/');
 }
 $sql = $pdoCV->query("SELECT * FROM t_utilisateurs WHERE id_utilisateur='$id_utilisateur' ");
 $ligne_utilisateur = $sql->fetch();//va chercher sur une ligne!
