@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 20 Juillet 2017 à 16:13
+-- Généré le :  Ven 21 Juillet 2017 à 09:38
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -28,26 +28,28 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `t_competences` (
   `id_competence` int(11) NOT NULL,
+  `icone` varchar(50) NOT NULL,
   `competence` varchar(45) NOT NULL,
   `niveau` varchar(5) NOT NULL,
-  `utilisateur_id` int(11) NOT NULL
+  `utilisateur_id` int(11) NOT NULL,
+  PRIMARY KEY(id_competence)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `t_competences`
 --
 
-INSERT INTO `t_competences` (`id_competence`, `competence`, `niveau`, `utilisateur_id`) VALUES
-(1, 'HTML5', '80%', 1),
-(2, 'CSS3', '60%', 1),
-(3, 'Bootstrap', '75%', 1),
-(4, 'JavaScript', '15%', 1),
-(5, 'JQuery', '10%', 1),
-(6, 'Angular', '5%', 1),
-(7, 'Ajax', '55%', 1),
-(8, 'PHP7', '55%', 1),
-(9, 'SQL', '65%', 1),
-(10, 'WordPress', '65%', 1);
+INSERT INTO `t_competences` (`id_competence`, `icone`, `competence`, `niveau`, `utilisateur_id`) VALUES
+(1, 'html.png', 'HTML5', '80%', 1),
+(2, 'css.png', 'CSS3', '60%', 1),
+(3, 'bootstrap.png', 'Bootstrap', '75%', 1),
+(4, 'javascript.png', 'JavaScript', '15%', 1),
+(5, 'jquery.png', 'JQuery', '10%', 1),
+(6, 'angular.png', 'Angular', '5%', 1),
+(7, 'ajax.png', 'Ajax', '55%', 1),
+(8, 'php.png', 'PHP7', '55%', 1),
+(9, 'sql.png', 'SQL', '65%', 1),
+(10, 'wordpress.png', 'WordPress', '65%', 1);
 
 -- --------------------------------------------------------
 

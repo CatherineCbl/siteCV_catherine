@@ -1,5 +1,4 @@
 <?php
-//require '../connexion/connexion.php';
 use Model\Db\DbFactory;
 
 DbFactory::start();
@@ -10,7 +9,8 @@ $utilisateurs = \ORM::for_table('t_utilisateurs')->where('id_utilisateur', '1')-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Site CV de <?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?></title>
 <meta name="description" content="">

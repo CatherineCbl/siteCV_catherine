@@ -191,7 +191,7 @@ hr {
 	font-size: 18px;
 }
 
-@media(min-width:768px) {
+@media(min-width:736px) {
 #intro {
 	height: 100%;
 	padding: 0;
@@ -204,7 +204,7 @@ hr {
 }
 }
 .btn-default {
-	color: #f6f6f6;
+	color: #333333;
 	background: pink;
 	border: 0;
 	padding: 12px 24px;
@@ -368,6 +368,182 @@ hr {
 #services p {
 	color: rgba(255,255,255,0.7);
 }
+.bars {
+	width: 95%;
+	float: left;
+	padding: 0;
+	text-align: left;
+}
+.bars .skills {
+  	margin-top: 36px;
+   list-style: none;
+}
+.bars li {
+   position: relative;
+  	margin-bottom: 60px;
+  	background: pink;
+  	height: 15px;
+  	border-radius: 3px;
+}
+.bars li em {
+	font: 15px 'opensans-bold', sans-serif;
+   color: #313131;
+	text-transform: uppercase;
+   letter-spacing: 2px;
+	font-weight: normal;
+   position: relative;
+	top: -36px;
+}
+.bar-expand {
+   position: absolute;
+   left: 0;
+   top: 0;
+
+   margin: 0;
+   padding-right: 24px;
+  	background: #313131;
+   display: inline-block;
+  	height: 42px;
+   line-height: 42px;
+   border-radius: 3px 0 0 3px;
+}
+
+.PHP7 {
+  	width: 55%;
+  	-moz-animation: PHP7 2s ease;
+  	-webkit-animation: PHP7 2s ease;
+}
+.SQL {
+  	width: 65%;
+  	-moz-animation: SQL 2s ease;
+  	-webkit-animation: SQL 2s ease;
+}
+.WordPress {
+  	width: 65%;
+  	-moz-animation: WordPress 2s ease;
+  	-webkit-animation: WordPress 2s ease;
+}
+.Ajax {
+  	width: 55%;
+  	-moz-animation: Ajax 2s ease;
+  	-webkit-animation: Ajax 2s ease;
+}
+.Bootstrap {
+  	width: 75%;
+  	-moz-animation: Bootstrap 2s ease;
+  	-webkit-animation: Bootstrap 2s ease;
+}
+.JavaScript {
+  	width: 15%;
+  	-moz-animation: JavaScript 2s ease;
+  	-webkit-animation: JavaScript 2s ease;
+}
+.CSS3 {
+  	width: 60%;
+  	-moz-animation: CSS3 2s ease;
+  	-webkit-animation: CSS3 2s ease;
+}
+.HTML5 {
+  	width: 85%;
+  	-moz-animation: HTML5 2s ease;
+  	-webkit-animation: HTML5 2s ease;
+}
+.JQuery {
+  	width: 10%;
+  	-moz-animation: JQuery 2s ease;
+  	-webkit-animation: JQuery 2s ease;
+}
+
+
+.bars {
+	width: 95%;
+	float: left;
+	padding: 0;
+	text-align: left;
+}
+.bars .skills {
+  	margin-top: 36px;
+   list-style: none;
+}
+.bars li {
+   position: relative;
+  	margin-bottom: 60px;
+  	background: #ccc;
+  	height: 15px;
+  	border-radius: 3px;
+}
+.bars img {
+	height: 64px;
+	width: 64px;
+}
+.bars li em {
+	font: 15px 'opensans-bold', sans-serif;
+   color: #313131;
+	text-transform: uppercase;
+   letter-spacing: 2px;
+	font-weight: normal;
+   position: relative;
+	top: -36px;
+}
+.bar-expand {
+   position: absolute;
+   left: 0;
+   top: 0;
+
+   margin: 0;
+   padding-right: 24px;
+  	background: pink;
+   display: inline-block;
+  	height: 15px;
+   line-height: 42px;
+   border-radius: 3px 0 0 3px;
+}
+
+.PHP7 {
+  	width: 55%;
+  	-moz-animation: PHP7 2s ease;
+  	-webkit-animation: PHP7 2s ease;
+}
+.SQL {
+  	width: 65%;
+  	-moz-animation: SQL 2s ease;
+  	-webkit-animation: SQL 2s ease;
+}
+.WordPress {
+  	width: 65%;
+  	-moz-animation: WordPress 2s ease;
+  	-webkit-animation: WordPress 2s ease;
+}
+.Ajax {
+  	width: 55%;
+  	-moz-animation: Ajax 2s ease;
+  	-webkit-animation: Ajax 2s ease;
+}
+.Bootstrap {
+  	width: 75%;
+  	-moz-animation: Bootstrap 2s ease;
+  	-webkit-animation: Bootstrap 2s ease;
+}
+.JavaScript {
+  	width: 15%;
+  	-moz-animation: JavaScript 2s ease;
+  	-webkit-animation: JavaScript 2s ease;
+}
+.CSS3 {
+  	width: 60%;
+  	-moz-animation: CSS3 2s ease;
+  	-webkit-animation: CSS3 2s ease;
+}
+.HTML5 {
+  	width: 85%;
+  	-moz-animation: HTML5 2s ease;
+  	-webkit-animation: HTML5 2s ease;
+}
+.JQuery {
+  	width: 10%;
+  	-moz-animation: JQuery 2s ease;
+  	-webkit-animation: JQuery 2s ease;
+}
 
 
 /* TIMELINE  */
@@ -501,64 +677,7 @@ time {
 	padding: 120px 0;
 	background: #f6f6f6;
 }
-.categories {
-	padding-bottom: 30px;
-	text-align: center;
-}
-ul.cat li {
-	display: inline-block;
-}
-ol.type li {
-	display: inline-block;
-	margin-left: 20px;
-}
-ol.type li a {
-	color: #777;
-	padding: 8px 16px;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-}
-ol.type li a.active {
-	color: #f6f6f6;
-	border: 1px solid gray;
-	background: pink;
-}
-ol.type li a:hover {
-	color: #f6f6f6;
-	border: 1px solid gray;
-	background: pink;
-}
-.isotope-item {
-	z-index: 2
-}
-.isotope-hidden.isotope-item {
-	z-index: 1
-}
-.isotope, .isotope .isotope-item {
-	/* change duration value to whatever you like */
-	-webkit-transition-duration: 0.8s;
-	-moz-transition-duration: 0.8s;
-	transition-duration: 0.8s;
-}
-.isotope-item {
-	margin-right: -1px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-.isotope {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transition-property: height, width;
-	-moz-transition-property: height, width;
-	transition-property: height, width;
-}
-.isotope .isotope-item {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transition-property: -webkit-transform, opacity;
-	-moz-transition-property: -moz-transform, opacity;
-	transition-property: transform, opacity;
-}
+
 .portfolio-item {
 	margin-bottom: 30px;
 }
@@ -619,11 +738,7 @@ ol.type li a:hover {
 .hover-bg:hover .hover-text {
 	opacity: 1;
 }
-#realisations i.fa {
-	font-size: 20px;
-	padding: 5px;
-	color: pink;
-}
+
 
 /*Section Loisirs */
 #loisirs {
@@ -716,7 +831,7 @@ label {
 	border: 0;
 	border-radius: 4px;
 	padding: 10px 20px;
-	color: #f6f6f6;
+	color: #333;
 	margin-top: 15px;
 	font-size: 15px;
 }
