@@ -2,7 +2,6 @@
 use Model\Db\DbFactory;
 
 DbFactory::start();
-$titres_cv = \ORM::for_table('t_titres_cv')->where('utilisateur_id','1')->find_one();
 $utilisateurs = \ORM::for_table('t_utilisateurs')->where('id_utilisateur', '1')->find_one();
  ?>
 
@@ -70,8 +69,8 @@ $utilisateurs = \ORM::for_table('t_utilisateurs')->where('id_utilisateur', '1')-
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1> <span class="brand-heading"><?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?></span></h1>
-          <h2 class="intro-text"><?= $titres_cv->titre_cv ?></h2>
+          <h1><span class="brand-heading typed"></span></h1>
+          <span class="typed-cursor"></span><br><br><br>
           <a href=<?= $this->assetUrl("img/CV_catherine_cabeuil.pdf");?> class="btn btn-default page-scroll" download>Téléchargez mon Cv </a> </div>
       </div>
     </div>
@@ -115,5 +114,17 @@ $utilisateurs = \ORM::for_table('t_utilisateurs')->where('id_utilisateur', '1')-
     ================================================== -->
 <script type="text/javascript" src=<?= $this->assetUrl("js/main.js")?>></script>
 <script type="text/javascript" src=<?= $this->assetUrl("js/timeline.js")?>></script>
+<script type="text/javascript" src=<?= $this->assetUrl("js/typed.min.js")?>></script>
+<script>
+$(".typed").typed({
+                  strings: ["Catherine CABEUIL", "Développeuse web full-stack junior", "Organisée et persévérante"],
+                  typeSpeed: 100,
+                  loop: true,
+                  startDelay: 1000,
+                  backDelay: 1000
+              });
+
+</script>
+
 </body>
 </html>
