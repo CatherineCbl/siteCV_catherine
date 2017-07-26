@@ -6,8 +6,9 @@ if(isset($_POST['titre_r'])){
 	$realisation = addslashes($_POST['titre_r']);
 	$description = addslashes($_POST['description_r']);
 	$dates = addslashes($_POST['dates_r']);
+	$img = addslashes($_POST['img']);
 	$id_realisation = $_POST['id_realisation'];
-	$pdoCV->exec(" UPDATE t_realisations SET titre_r='$realisation', description_r='$description', dates_r='$dates' WHERE id_realisation='$id_realisation' ");
+	$pdoCV->exec(" UPDATE t_realisations SET titre_r='$realisation',img='$img', description_r='$description', dates_r='$dates' WHERE id_realisation='$id_realisation' ");
 	header('location: ../pages/realisations.php');
 	exit();
 }
@@ -91,6 +92,13 @@ $ligne_realisations = $sql->fetch(); //
                                     <textarea name="description_r" id="description_e" cols="80" rows="4" class="form-control"><?= $ligne_realisations['description_r']; ?> </textarea>
                                 </div>
                             </div>
+							<!-- Text input-->
+							<div class="form-group">
+								<label for="img" class="col-md-4 control-label" >Miniature</label>
+								<div class="col-md-4">
+									<input name="img" type="text" class="form-control input-md" value="<?= $ligne_realisations['img']; ?>">
+								</div>
+							</div>
 							<!-- Text input-->
 							<div class="form-group">
 								<label for="dates_r" class="col-md-4 control-label" >Dates</label>

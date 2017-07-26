@@ -3,10 +3,11 @@ use Model\Db\DbFactory;
 
 DbFactory::start();
 $utilisateurs = \ORM::for_table('t_utilisateurs')->where('id_utilisateur', '1')->find_one();
+$titres = \ORM::for_table('t_titres_cv')->where('utilisateur_id', '1')->find_one();
  ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,8 +70,8 @@ $utilisateurs = \ORM::for_table('t_utilisateurs')->where('id_utilisateur', '1')-
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1><span class="brand-heading typed"></span></h1>
-          <span class="typed-cursor"></span><br><br><br>
+          <h1><span class="brand-heading typed hidden-sm hidden-xs"></span><span class="brand-heading visible-sm visible-xs"><?= $titres->titre_cv ?></span></h1>
+          <span class="typed-cursor hidden-sm hidden-xs"></span><br><br><br>
           <a href=<?= $this->assetUrl("img/CV_catherine_cabeuil.pdf");?> class="btn btn-default page-scroll" download>Téléchargez mon Cv </a> </div>
       </div>
     </div>

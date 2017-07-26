@@ -58,6 +58,7 @@ include '../inc/nav.inc.php';
                                                 <tr>
                                                     <th scope="col">Réalisations</th>
                                                     <th scope="col">Descriptions</th>
+                                                    <th scope="col">Miniature</th>
                                                     <th scope="col">Dates</th>
                                                     <th scope="col">Modifier</th>
                                                     <th scope="col">Supprimer</th>
@@ -66,6 +67,7 @@ include '../inc/nav.inc.php';
                                                 <tr id="<?php echo $ligne_realisations['id_realisation']; ?>">
                                                     <td><?= $ligne_realisations['titre_r'];?></td>
                                                     <td><?= $ligne_realisations['description_r'];?></td>
+                                                    <td><?= $ligne_realisations['img'];?></td>
                                                     <td><?= $ligne_realisations['dates_r'];?></td>
                                                     <td><a href="../pages/modif_realisations.php?id_realisation=<?php echo $ligne_realisations['id_realisation']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
                                                     <td><a id="suppression" href="<?php echo $ligne_realisations['id_realisation']; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
@@ -84,6 +86,7 @@ include '../inc/nav.inc.php';
                                     <label for="realisation">Ajouter une réalisation</label>
                                     <input class="form-control" placeholder="Exemple de site" name="titre_r" id="titre_r" required>
                                     <textarea class="form-control" name="description_r" id="description_r" required></textarea>
+                                    <input class="form-control" type="text" name="img" id="img" placeholder="img/portfolio/01.jpg" required>
                                     <input class="form-control" type="date" name="dates_r" id="dates_r" required>
                                 </div>
                                 <button type="submit" class="btn btn-default" id="button_realisation">Ajouter</button>

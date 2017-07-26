@@ -10,16 +10,21 @@
     </div>
     <div class="row">
 
-            <div class="bars">
-                        <ul class="skills">
-                            <?php foreach ($competences as $competence) : ?>
-                            <img src=<?= $this->assetUrl("img/$competence->icone");?> alt=""><li>  <span class="bar-expand <?= $competence->competence ?>"></span></li>
-                            <?php endforeach; ?>
-                        </ul>
+        <div class="container">
+            <div class="row">
 
-                    </div><!-- end skill-bars -->
-
-
+                <div class="col-md-6 col-md-offset-3">
+                    <?php foreach ($competences as $competence) : ?>
+                    <h3 class="progress-title"><?= $competence->competence; ?></h3>
+                    <div class="progress pink">
+                        <div class="progress-bar" style="width:<?= $competence->niveau; ?>; background:pink;">
+                            <div class="progress-value"><?= $competence->niveau; ?></div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -77,15 +82,17 @@
 
     <div class="row">
       <div class="portfolio-items">
+          <?php foreach ($realisations as $realisation) : ?>
         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lorem">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href=<?= $this->assetUrl("img/portfolio/01.jpg");?> title="Project description" rel="prettyPhoto">
+            <div class="hover-bg"> <a href=<?= $this->assetUrl("$realisation->img");?> title="Project description" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Mon site CV</h4>
-                <p>Fait avec Bootstrap, du PHP7, de l'Ajax,<br> du JS et une architecture MVC</p>
+                <h4><?= $realisation->titre_r ?></h4>
+                <p><?= $realisation->description_r ?></p>
               </div>
-              <img src=<?= $this->assetUrl("img/portfolio/01.jpg");?> class="img-responsive" alt="Project Title"> </a> </div>
+              <img src=<?= $this->assetUrl("$realisation->img");?> class="img-responsive" alt="Project Title"> </a> </div>
           </div>
+          <?php endforeach; ?>
         </div>
     </div>
 </div>
@@ -104,34 +111,14 @@
     </div>
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <div class="row testimonials">
+        <div class="row">
+            <?php foreach ($loisirs as $loisir) : ?>
           <div class="col-sm-4">
-            <blockquote><i class="fa fa-quote-left"></i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitduis sed dapibus leo nec ornare.</p>
-              <div class="clients-name">
-                <p><strong>John Doe</strong><br>
-                  <em>CEO, Company Inc.</em></p>
-              </div>
+            <blockquote><i class="fa fa-gratipay"></i>
+              <p><?= $loisir->loisir ?></p>
             </blockquote>
           </div>
-          <div class="col-sm-4">
-            <blockquote><i class="fa fa-quote-left"></i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitduis sed dapibus leo nec ornare.</p>
-              <div class="clients-name">
-                <p><strong>Jane Doe</strong><br>
-                  <em>CEO, Company Inc.</em></p>
-              </div>
-            </blockquote>
-          </div>
-          <div class="col-sm-4">
-            <blockquote><i class="fa fa-quote-left"></i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitduis sed dapibus leo nec ornare.</p>
-              <div class="clients-name">
-                <p><strong>Chris Smith</strong><br>
-                  <em>CEO, Company Inc.</em></p>
-              </div>
-            </blockquote>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>

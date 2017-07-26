@@ -5,9 +5,8 @@
 if(isset($_POST['competence'])){
 	$competence = addslashes($_POST['competence']);
 	$niveau = addslashes($_POST['niveau']);
-	$icone = addslashes($_POST['icone']);
 	$id_competence = $_POST['id_competence'];
-	$pdoCV->exec(" UPDATE t_competences SET competence='$competence', niveau='$niveau', icone='$icone' WHERE id_competence='$id_competence' ");
+	$pdoCV->exec(" UPDATE t_competences SET competence='$competence', niveau='$niveau' WHERE id_competence='$id_competence' ");
 	header('location: ../pages/competences.php');
 	exit();
 }
@@ -90,7 +89,6 @@ $ligne_competences = $sql->fetch(); //
 									<div class="col-md-4">
 										<input name="competence" type="text" class="form-control input-md" value="<?= $ligne_competences['competence']; ?>">
 										<input name="niveau" type="text" class="form-control input-md" value="<?= $ligne_competences['niveau']; ?>">
-										<input name="icone" type="text" class="form-control input-md" value="<?= $ligne_competences['icone']; ?>">
 										<input name="id_competence" hidden value="<?= $ligne_competences['id_competence']; ?>">
 									</div>
 								</div>

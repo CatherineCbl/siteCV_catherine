@@ -7,7 +7,6 @@ $(function() {
             data: {
                 competence : $("#competence").val(),
                 niveau : $("#niveau").val(),
-                icone : $("#icone").val()
             }
             })
             .done(function(competence){
@@ -16,7 +15,6 @@ $(function() {
                 $('tr').last().after(`<tr>
                     <td>`+data.competence+`</td>
                     <td>`+data.niveau+`</td>
-                    <td>`+data.icone+`</td>
                     <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td><a href="competences.php?id_competence=`+data.id_competence+`"> <span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>`)

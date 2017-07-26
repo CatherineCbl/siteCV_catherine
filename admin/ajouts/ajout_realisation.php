@@ -6,8 +6,9 @@
     if ($_POST) {
         $realisation = addslashes($_POST['titre_r']);
         $description = addslashes($_POST['description_r']);
+        $img = addslashes($_POST['img']);
         $date = addslashes($_POST['dates_r']);
-        $pdoCV->exec(" INSERT INTO t_realisations VALUES(NULL, '$realisation', NULL,'$date', '$description', '$_SESSION[id_utilisateur]')");//mettre $id_utilisateur quand on l'aura en variable de session
+        $pdoCV->exec(" INSERT INTO t_realisations VALUES(NULL, '$realisation', NULL,'$date', '$description','$img', '$_SESSION[id_utilisateur]')");//mettre $id_utilisateur quand on l'aura en variable de session
         $lastinsert = $pdoCV->lastInsertId();
         $data = $pdoCV->query("SELECT * FROM t_realisations WHERE id_realisation='".$lastinsert."' ");
         $data = $data->fetch();

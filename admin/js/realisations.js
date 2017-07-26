@@ -11,6 +11,7 @@ $(function() {
                 titre_r : $("#titre_r").val(),
                 sous_titre_r : $("#sous_titre_r").val(),
                 description_r : $("#description_r").val(),
+                img : $("#img").val(),
                 dates_r : $("#dates_r").val()
             }
             })
@@ -20,6 +21,7 @@ $(function() {
                 $('tr').last().after(`<tr>
                     <td>`+data.titre_r+`</td>
                     <td>`+data.description_r+`</td>
+                    <td>`+data.img+`</td>
                     <td>`+data.dates_r+`</td>
                     <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td><a href="experiences.php?id_experience=`+data.id_realisation+`"> <span class="glyphicon glyphicon-trash"></span></a></td>
