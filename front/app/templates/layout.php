@@ -75,6 +75,10 @@ $titres = \ORM::for_table('t_titres_cv')->where('utilisateur_id', '1')->find_one
           <a href=<?= $this->assetUrl("img/CV_catherine_cabeuil.pdf");?> class="btn btn-default page-scroll" download>Téléchargez mon Cv </a> </div>
       </div>
     </div>
+
+        <a href="https://github.com/catherineCbl"><i class="fa fa-github" style="font-size:30px; margin: 10px 10px; marg"></i></a>
+        <a href="https://www.linkedin.com/in/catherine-cabeuil"><i class="fa fa-linkedin" style="font-size:30px;"></i></a>
+
   </div>
 </div>
 

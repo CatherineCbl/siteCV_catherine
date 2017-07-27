@@ -262,6 +262,17 @@ hr {
     0% { width: 0; }
 }
 
+/* Section expériences et formations */
+ #experiences_formations {
+  	padding: 140px 0;
+  	background: url(../img/services-bg.jpg);
+  	background-attachment: fixed;
+  }
+
+ #experiences_formations h2 {
+  	color: #f6f6f6;
+  }
+
 
 /* TIMELINE  */
 .timeline h4 {
