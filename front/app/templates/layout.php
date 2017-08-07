@@ -13,8 +13,9 @@ $titres = \ORM::for_table('t_titres_cv')->where('utilisateur_id', '1')->find_one
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Site CV de <?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?></title>
-<meta name="description" content="">
-<meta name="author" content="">
+
+<meta name="description" content="Site Cv catherine CABEUIL">
+<meta name="author" content="Catherine CABEUIL ">
 
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href=<?= $this->assetUrl("css/bootstrap.css");?>>
@@ -26,6 +27,7 @@ $titres = \ORM::for_table('t_titres_cv')->where('utilisateur_id', '1')->find_one
 <link rel="stylesheet" type="text/css" href=<?= $this->assetUrl("css/prettyPhoto.css");?>>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src=<?= $this->assetUrl("js/modernizr.custom.js");?>> </script>
+<link rel="icon" type="image/png" href=<?= $this->assetUrl("img/portfolio/01.jpg");?> />
 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -66,18 +68,19 @@ $titres = \ORM::for_table('t_titres_cv')->where('utilisateur_id', '1')->find_one
 
 <!-- Header -->
 <div id="intro">
+    <!--<img src=<?= $this->assetUrl("img/intro-bg.jpg");?> alt="" class="img-responsive" style="background: no-repeat center center fixed;">-->
   <div class="intro-body">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h1><span class="brand-heading typed hidden-sm hidden-xs"></span><span class="brand-heading visible-sm visible-xs"><?= $titres->titre_cv ?></span></h1>
+        <div class="col-xs-10 col-xs-offset-1">
+          <h1><span class="brand-heading typed "></span></h1>
           <span class="typed-cursor hidden-sm hidden-xs"></span><br><br><br>
-          <a href=<?= $this->assetUrl("img/CV_catherine_cabeuil.pdf");?> class="btn btn-default page-scroll" download>Téléchargez mon Cv </a> </div>
+          <a href=<?= $this->assetUrl("img/CV_catherine_cabeuil.pdf");?> class="btn btn-default page-scroll" download>Téléchargez mon CV </a> </div>
       </div>
     </div>
 
-        <a href="https://github.com/catherineCbl"><i class="fa fa-github" style="font-size:30px; margin: 10px 10px; marg"></i></a>
-        <a href="https://www.linkedin.com/in/catherine-cabeuil"><i class="fa fa-linkedin" style="font-size:30px;"></i></a>
+        <a href="https://github.com/catherineCbl" target="_blank"><i class="fa fa-github" style="font-size:30px; margin: 10px 10px; marg"></i></a>
+        <a href="https://www.linkedin.com/in/catherine-cabeuil" target="_blank"><i class="fa fa-linkedin" style="font-size:30px;"></i></a>
 
   </div>
 </div>
@@ -100,7 +103,7 @@ $titres = \ORM::for_table('t_titres_cv')->where('utilisateur_id', '1')->find_one
 
 <div id="footer">
   <div class="container">
-    <p>Copyright &copy; <?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?> 2017</p>  <p><a href="../../../admin/pages/authentification.php">Espace admin</a></p>
+    <p><?= $utilisateurs->prenom ?> <?= $utilisateurs->nom ?> 2017</p>  <p><a href="../../../admin/pages/authentification.php">Espace admin</a></p>
   </div>
 </div>
 
@@ -122,11 +125,11 @@ $titres = \ORM::for_table('t_titres_cv')->where('utilisateur_id', '1')->find_one
 <script type="text/javascript" src=<?= $this->assetUrl("js/typed.min.js")?>></script>
 <script>
 $(".typed").typed({
-                  strings: ["Catherine CABEUIL", "Développeuse web full-stack junior", "Organisée et persévérante"],
+                  strings: [ "Développeuse web full-stack junior", "Organisée et persévérante", "Catherine CABEUIL"],
                   typeSpeed: 100,
-                  loop: true,
                   startDelay: 1000,
-                  backDelay: 1000
+                  backDelay: 1000,
+                  loop: false
               });
 
 </script>

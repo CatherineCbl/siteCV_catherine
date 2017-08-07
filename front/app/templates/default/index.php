@@ -85,15 +85,15 @@
           <?php foreach ($realisations as $realisation) : ?>
         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lorem">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href=<?= $this->assetUrl("$realisation->img");?> title="Project description" rel="prettyPhoto">
+            <div class="hover-bg"> <a href=<?= $this->assetUrl("$realisation->img");?> title="<?= $realisation->description_r ?>" rel="prettyPhoto">
               <div class="hover-text">
                 <h4><?= $realisation->titre_r ?></h4>
                 <p><?= $realisation->description_r ?></p>
               </div>
-              <img src=<?= $this->assetUrl("$realisation->img");?> class="img-responsive" alt="Project Title"> </a> </div>
+              <img src=<?= $this->assetUrl("$realisation->img");?> class="img-responsive" alt="<?= $realisation->titre_r ?>"> </a> </div>
           </div>
-          <?php endforeach; ?>
         </div>
+    <?php endforeach; ?>
     </div>
 </div>
 </div>
@@ -130,9 +130,9 @@
 <div id="contact" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2>Contactez-moi!</h2>
+      <h2>Contactez-moi !</h2>
       <hr>
-      <p><em>Mon profil vous intéresse? N'hésitez pas à me contacter!</em></p>
+      <p><em>Mon profil vous intéresse ? N'hésitez pas à me contacter!</em></p>
     </div>
     <div class="col-md-8 col-md-offset-2">
       <div class="col-md-4">
@@ -177,7 +177,7 @@
         <button type="submit" class="btn btn-default">Envoyer</button>
       </form>
       <div class="social">
-        <h3>Suivez-moi!</h3>
+        <h3>Suivez-moi !</h3>
         <ul>
           <li><a href="https://github.com/catherineCbl"><i class="fa fa-github"></i></a></li>
           <li><a href="https://www.linkedin.com/in/catherine-cabeuil"><i class="fa fa-linkedin"></i></a></li>

@@ -178,10 +178,9 @@ hr {
 	vertical-align: middle;
 }
 #intro .intro-body H1 {
-	font-size: 76px;
+	font-size: 4.750em;
 	font-weight: 700;
 	color: #6b6769;
-	text-transform: uppercase;
 }
 #intro .intro-body .brand-heading {
 	color: #333;
@@ -270,7 +269,7 @@ hr {
   }
 
  #experiences_formations h2 {
-  	color: #f6f6f6;
+  	color: #555555;
   }
 
 
@@ -484,11 +483,11 @@ time {
 	margin-top: 20px;
 	border: 0;
 	text-align: center;
-	color: rgba(255,255,255,0.8);
+	color: #533937;
 }
 #loisirs i {
 	font-size: 24px;
-	color: rgba(255,255,255,0.3);
+	color: #533937;
 	margin-bottom: 14px;
 }
 
@@ -615,6 +614,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 @media (max-width: 640px) {
 #intro .intro-body H1 {
-	font-size: 5em;
+	font-size: 2em;
 }
 }

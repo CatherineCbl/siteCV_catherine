@@ -30,7 +30,7 @@ $ligne_loisirs = $sql->fetch(); //
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title><?='<strong>'.$ligne['prenom'].' '.$ligne['nom'].'</strong>';?></title>
+	<title><?= $ligne['prenom'].' '.$ligne['nom'];?></title>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
