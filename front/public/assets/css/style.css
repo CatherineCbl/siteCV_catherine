@@ -483,11 +483,14 @@ time {
 	margin-top: 20px;
 	border: 0;
 	text-align: center;
-	color: #533937;
+	color: #fff;
+	font-weight: 900;
+	font-size: 50px;
+	text-shadow: 0 0 2px #000000;
 }
 #loisirs i {
 	font-size: 24px;
-	color: #533937;
+	color: #fff;
 	margin-bottom: 14px;
 }
 
@@ -617,3 +620,4 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-size: 2em;
 }
 }
+
